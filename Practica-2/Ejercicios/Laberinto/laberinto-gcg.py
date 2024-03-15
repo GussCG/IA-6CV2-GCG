@@ -9,6 +9,7 @@
 #Librerias
 import time
 from Laberinto import solve_maze
+import sys
 
 if __name__ == "__main__":
     inicio = time.time()
@@ -44,3 +45,6 @@ if __name__ == "__main__":
 
     fin = time.time()
     print("Tiempo de ejecucion: ", fin - inicio)
+
+
+
