@@ -1,13 +1,32 @@
+
+# Autor: Gustavo Cerda García
+# Practica 5
+# Ejericio 1. Tic Tac Toe con Heurística
+
+# Programa que simula el juego de Tic Tac Toe
+# El juego se puede jugar entre dos jugadores o contra la computadora
+# La computadora utiliza una heurística para elegir su movimiento
+
+# Librerias
 import os
 import random
 import time
 from collections import deque
 
+# Variables globales
+# tablero: Matriz que representa el tablero del juego
 tablero = [" ", " ", " "], [" ", " ", " "], [" ", " ", " "]
+# turno: Cola para llevar el control de los turnos
 turno = deque(["O", "X"])
+# jugador1: Nombre del jugador 1
 jugador1 = ""
+# jugador2: Nombre del jugador 2
 jugador2 = ""
 
+#Nombre: menuInicio
+#Descripción: Muestra el menú de inicio del juego
+#Salidas:
+# - Opción seleccionada por el usuario
 def menuInicio():
     os.system("cls")
     print("|---------------------------------|")
@@ -24,6 +43,8 @@ def menuInicio():
     print("|---------------------------------|")
     return opcion
 
+#Nombre: mostrarTablero
+#Descripción: Muestra el tablero del juego
 def mostrarTablero():
     print("")
     print("   ", tablero[0][0], " |  ", tablero[0][1], " |  ", tablero[0][2])
@@ -33,15 +54,27 @@ def mostrarTablero():
     print("   ", tablero[2][0], " |  ", tablero[2][1], " |  ", tablero[2][2])
     print("")
 
+#Nombre: resetTablero
+#Descripción: Reinicia el tablero del juego
 def resetTablero():
     for i in range(3):
         for j in range(3):
             tablero[i][j] = " "
 
+#Nombre: rotarTurno
+#Descripción: Cambia el turno de los jugadores
+#Salidas: 
+# - Jugador actual
 def rotarTurno():
     turno.rotate()
     return turno[0]
 
+#Nombre: procesarPosicion
+#Descripción: Procesa la posición ingresada por el jugador y la convierte a una posición en el tablero
+#Entradas:
+# - posicion: Posición en el tablero
+#Salidas: 
+# - Posición en el tablero
 def procesarPosicion(posicion):
     posicion = int(posicion)
     if posicion == 1:
@@ -65,15 +98,32 @@ def procesarPosicion(posicion):
     else:
         return -1, -1
 
+#Nombre: posicion_correcta
+#Descripción: Verifica si la posición ingresada por el jugador es correcta (no está ocupada) o se encuentra dentro del tablero
+#Entradas:
+# - posicion: Posición a verificar
+#Salidas:
+# - True si la posición es correcta, False en otro caso
 def posicion_correcta(posicion):
     if 0 <= posicion[0] < 3 and 0 <= posicion[1] < 3:
         if tablero[posicion[0]][posicion[1]] == " ":
             return True
     return False
 
+#Nombre: actualizar_tablero
+#Descripción: Actualiza el tablero con la jugada del jugador
+#Entradas: 
+# - posicion: Posición en el tablero donde se colocará la ficha
+# - jugador: Jugador que realiza la jugada
 def actualizar_tablero(posicion, jugador):
     tablero[posicion[0]][posicion[1]] = jugador
 
+#Nombre: verificarGanador
+#Descripción: Verifica si un jugador ha ganado el juego (3 en raya)
+#Entradas:
+# - jugador: Jugador a verificar si ha ganado
+#Salidas: 
+# - True si el jugador ha ganado, False en otro caso
 def verificarGanador(jugador):
     for i in range(3):
         if tablero[i][0] == jugador and tablero[i][1] == jugador and tablero[i][2] == jugador:
@@ -87,6 +137,10 @@ def verificarGanador(jugador):
         return True
     return False
 
+#Nombre: esEmpate
+#Descripción: Verifica si el juego ha terminado en empate (no hay más movimientos posibles)
+#Salidas: 
+# - True si el juego ha terminado en empate, False en otro caso
 def esEmpate():
     for i in range(3):
         for j in range(3):
@@ -94,6 +148,8 @@ def esEmpate():
                 return False
     return True
 
+#Nombre: jugadorVsJugador
+#Descripción: Juego de Tic Tac Toe entre dos jugadores
 def jugadorVsJugador():
     os.system("cls")
     print("|---------------------------------|")
@@ -179,6 +235,8 @@ def jugadorVsJugador():
             print("|      POSICION INCORRECTA        |")
             print("|---------------------------------|")
     
+#Nombre: jugadorVsComputadora
+#Descripción: Juego de Tic Tac Toe entre un jugador y la computadora    
 def jugadorVsComputadora():
     os.system("cls")
     print("|---------------------------------|")
@@ -260,6 +318,8 @@ def jugadorVsComputadora():
             print("|      POSICION INCORRECTA        |")
             print("|---------------------------------|")
 
+#Nombre: computadoraVsComputadora
+#Descripción: Juego de Tic Tac Toe entre dos computadoras
 def computadoraVsComputadora():
     os.system("cls")
     print("|---------------------------------|")
@@ -338,6 +398,8 @@ def computadoraVsComputadora():
             print("|      POSICION INCORRECTA        |")
             print("|---------------------------------|")
 
+#Nombre: juego
+#Descripción: Función principal del juego    
 def juego():
     while True:
         opcion = menuInicio()
@@ -354,6 +416,13 @@ def juego():
             print("Opcion no valida")
 
 #! CAMBIOS
+
+#Nombre: elegirMovimientoComputadora
+#Descripción: Elegir el movimiento de la computadora
+#Entradas:
+# - jugador: Jugador al que le toca jugar
+#Salidas:
+# - Posición en el tablero donde se colocará la ficha
 def elegirMovimientoComputadora(jugador):
     # Estrategia heurística
     # 1. Ganar si es posible

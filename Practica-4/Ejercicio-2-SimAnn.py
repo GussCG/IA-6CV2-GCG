@@ -1,10 +1,11 @@
 
-#Autor: Gustavo Cerda García
-#Ejericio 2. Simulated Annealing - Funciones
+# Autor: Gustavo Cerda García
+# Practica 4
+# Ejericio 2. Simulated Annealing - Funciones
 
-#Programa que implementa el algoritmo de Simulated Annealing para encontrar el mínimo de una función.
+# Programa que implementa el algoritmo de Simulated Annealing para encontrar el mínimo de una función.
 
-#Librerías
+# Librerías
 import math # Para la función exponencial
 import random # Para generar números aleatorios
 

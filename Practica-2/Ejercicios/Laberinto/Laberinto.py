@@ -1,5 +1,6 @@
 
 # Autor: Gustavo Cerda García
+# Practica 2
 # Ejercicio 2: Laberinto
 
 #Aquí guardamos las funciones necesarias para resolver el laberinto

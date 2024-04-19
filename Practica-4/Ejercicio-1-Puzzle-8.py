@@ -1,10 +1,11 @@
 
-#Autor: Gustavo Cerda García
-#Ejericio 1. A* - 8 Puzzle"
+# Autor: Gustavo Cerda García
+# Practica 4
+# Ejericio 1. A* - 8 Puzzle"
 
-#Programa que resuelve el problema del 8-puzzle utilizando el algoritmo de búsqueda A*. La heurística utilizada es la distancia Manhattan. La distancia Manhattan es la suma de las distancias horizontales y verticales de cada número a su posición correcta en el tablero.
+# Programa que resuelve el problema del 8-puzzle utilizando el algoritmo de búsqueda A*. La heurística utilizada es la distancia Manhattan. La distancia Manhattan es la suma de las distancias horizontales y verticales de cada número a su posición correcta en el tablero.
 
-#Librerías
+# Librerías
 import heapq # Para la cola de prioridad
 import random # Para generar tableros aleatorios
 

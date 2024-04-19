@@ -1,12 +1,13 @@
 
-#Autor: Gustavo Cerda García
-#Ejercicio 2: Laberinto
+# Autor: Gustavo Cerda García
+# Practica 2
+# Ejercicio 2: Laberinto
 
-#Tipo de Laberinto: Laberinto sin solución (20x20)
+# Tipo de Laberinto: Laberinto sin solución (20x20)
 
-#Programa que resuelve un laberinto utilizanado una DFS (Depth First Search)
+# Programa que resuelve un laberinto utilizanado una DFS (Depth First Search)
 
-#Librerias
+# Librerias
 import time
 from Laberinto import solve_maze
 

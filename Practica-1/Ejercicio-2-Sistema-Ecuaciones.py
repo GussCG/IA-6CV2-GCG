@@ -1,5 +1,6 @@
 
 #Autor: Gustavo Cerda García
+#Practica 1
 #Ejericio 2. Sistema de ecuaciones lineales
 
 #Programa que resuelve un sistema de ecuaciones lineales de 4x4 

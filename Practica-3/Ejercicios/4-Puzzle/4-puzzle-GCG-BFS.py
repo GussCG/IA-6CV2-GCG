@@ -1,10 +1,11 @@
 
-#Autor: Gustavo Cerda García
-#Ejericio 1. BFS - 4 Puzzle"
+# Autor: Gustavo Cerda García
+# Practica 3
+# Ejericio 1. BFS - 4 Puzzle"
 
-#Programa que resuelve el problema del 4-puzzle utilizando el algoritmo de búsqueda en amplitud (BFS).
+# Programa que resuelve el problema del 4-puzzle utilizando el algoritmo de búsqueda en amplitud (BFS).
 
-#Librerías
+# Librerías
 from arbol import Nodo
 import sys
 

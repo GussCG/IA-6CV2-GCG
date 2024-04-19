@@ -1,5 +1,6 @@
 
 #Autor: Gustavo Cerda García
+#Practica 2
 #Ejericio 1. DFS - 4 Puzzle"
 
 #Programa que resuelve el problema del 4-puzzle utilizando el algoritmo de búsqueda en profundidad (DFS).

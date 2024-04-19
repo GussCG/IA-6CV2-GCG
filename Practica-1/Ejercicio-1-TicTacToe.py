@@ -1,18 +1,19 @@
 
-#Autor: Gustavo Cerda García
-#Ejericio 1. Tic Tac Toe "Tonto"
+# Autor: Gustavo Cerda García
+# Practica 1
+# Ejericio 1. Tic Tac Toe "Tonto"
 
-#Programa que simula el juego de Tic Tac Toe
-#El juego se puede jugar entre dos jugadores o contra la computadora
-#La computadora juega de forma aleatoria (no tiene un tipo de inteligencia)
+# Programa que simula el juego de Tic Tac Toe
+# El juego se puede jugar entre dos jugadores o contra la computadora
+# La computadora juega de forma aleatoria (no tiene un tipo de inteligencia)
 
-#Librerias
+# Librerias
 import os
 import random
 import time
 from collections import deque
 
-#Variables globales
+# Variables globales
 #tablero: Arreglo que representa el tablero del juego
 tablero = [" ", " ", " "],[" ", " ", " "],[" ", " ", " "]
 #turno: Cola que representa el turno de los jugadores
